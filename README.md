@@ -1,3 +1,4 @@
+[English](README-en.md)  [中文](README.md)
 
 # Markdown 编辑器
 利用AI辅助制作的Markdown编辑器，支持实时预览、语法高亮、快捷键、文件导入导出、多文件管理、多主题切换、历史记录、自动保存、AI辅助等功能。
