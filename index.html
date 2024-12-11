@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MDReader 1.0 - 基于 Electron 的 Markdown 阅读器</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';">
+  <script src="./libs/vue.min.js"></script>
+  <script src="./libs/mermaid.min.js"></script>
+  <link href="./libs/bootstrap.min.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+  <link href="./libs/bootstrap-icons.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"> -->
+  <script src="./libs/highlight.js"></script>
+
+  
+</head>
+<body>
+  <header>
+    
+  </header>
+  <div class="container-fluid p-0">
+    <div class="col-md-6 p-0"> <!-- 编辑器区域 -->
+      <!-- <textarea id="editor" class="form-control h-100" placeholder="在这里编辑你的Markdown文本..."></textarea> -->
+      <div id="editor" class="editor" contenteditable="true" placeholder="在这里编辑你的Markdown文本...">
+      </div>
+      <button id="openFileButton" style="display: none; margin-top: 10px;" class="btn btn-success editor-open-btn">打开文件</button>
+    </div>
+    <div class="col-md-6" id="preview"> <!-- 预览区域 -->
+      <!-- 预览内容将由 JavaScript 更新 -->
+    </div>
+  </div>
+  <div id="contextMenu">
+    <ul>
+        <li onclick="alert('菜单项1')">菜单项1</li>
+        <li onclick="alert('菜单项2')">菜单项2</li>
+    </ul>
+  </div>  
+  <script src="renderer.js"></script>
+</body>
+</html>

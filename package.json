@@ -1,0 +1,32 @@
+{
+  "name": "markdown-editor",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . MDReader --platform=darwin --arch=arm64 --out=dist/ --overwrite"
+  },
+  "dependencies": {
+    "electron": "^33.2.1",
+    "highlight.js": "^11.10.0",
+    "katex": "^0.16.15",
+    "markdown-it": "^14.1.0",
+    "markdown-it-abbr": "^2.0.0",
+    "markdown-it-deflist": "^3.0.0",
+    "markdown-it-emoji": "^3.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-ins": "^4.0.0",
+    "markdown-it-mark": "^4.0.0",
+    "markdown-it-sub": "^2.0.0",
+    "markdown-it-sup": "^2.0.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "marked": "latest",
+    "mermaid": "^11.4.1",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "electron-packager": "^17.1.2",
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}

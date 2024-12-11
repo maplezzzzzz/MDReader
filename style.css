@@ -1,0 +1,182 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.container-fluid {
+  height: 100vh; /* 填满整个视口高度 */
+  display: flex; /* 使用 Flexbox 布局 */
+}
+
+.editor {
+  flex: 1; /* 使编辑区占据剩余空间 */
+  border: none; /* 去掉默认边框 */
+  border-right: 1px solid #ddd; /* 添加右侧分割线 */
+  padding: 20px; /* 内边距 */
+  font-family: 'Courier New', Courier, monospace; /* 更像文本编辑器的字体 */
+  background-color: #464646; /* 背景颜色 */
+  color: #f7f7f7; /* 字体颜色 */
+  overflow-y: auto; /* 允许垂直滚动 */
+  height: 100%; /* 填满父容器高度 */
+  white-space: pre-wrap; /* 保持空格和换行 */
+}
+
+.editor .highlight {
+  background-color: rgba(156, 215, 255, 0.3); /* 高亮颜色，浅黄色 */
+}
+
+#preview {
+  flex: 1; /* 使预览区占据剩余空间 */
+  padding: 40px; /* 内边距 */
+  background-color: #ffffff; /* 白色背景，增加亮度 */
+  border-left: 1px solid #ddd; /* 左侧分割线 */
+  overflow-y: auto; /* 允许垂直滚动 */
+  height: 100%; /* 填满父容器高度 */
+  color: #2c2c2c; /* 预览文本颜色 */
+}
+
+/* 优化其他样式定义 */
+h1, h2, h3 {
+  color: #007bff; /* 使用清新明亮的蓝色作为标题颜色 */
+}
+
+p {
+  line-height: 1.6; /* 行高 */
+  color: #555; /* 段落文字颜色 */
+}
+
+blockquote {
+  border-left: 4px sold #007bff; /* 引用框左边框 */
+  padding: 10px 20px;
+  background-color: #e9f5ff; /* 清新背景色 */
+  color: #333;
+  margin: 0;
+}
+
+code {
+  background: #e9f5ff; /* 代码样式背景 */
+  padding: 2px 4px;
+  border-radius: 3px;
+  color: #d63384; /* 对比度颜色 */
+}
+
+pre {
+  background: #f8f9fa; /* 代码块样式 */
+  /* padding: 10px; */
+  border-radius: 10px;
+  overflow-x: auto; /* 允许水平滚动 */
+  box-shadow: 0 0 10px #908f8f;
+}
+
+img {
+  width: 100%; /* 图片宽度自适应 */
+  max-width: 100%; /* 图片最大宽度 */
+  height: auto; /* 图片高度自适应 */
+  margin: 10px 0; /* 图片外边距 */
+  border-radius: 10px; /* 图片圆角 */
+  box-shadow: 0 0 10px #908f8f; /* 图片阴影 */
+}
+
+.line {
+    padding: 5px;
+    cursor: pointer;
+}
+.line:hover {
+    background-color: #e0e0e0; /* 鼠标悬浮时高亮 */
+}
+#contextMenu {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+#contextMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#contextMenu li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+#contextMenu li:hover {
+    background: #f0f0f0;
+}
+
+.line-number {
+  display: inline-block;
+  width: 30px; /* 根据需要调整宽度 */
+  text-align: right; 
+  margin-right: 10px; /* 行号与代码之间的间距 */
+  color: #888; /* 行号颜色 */
+}
+.editor-open-btn{
+    margin-top: 10px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    z-index: 1000;
+}
+
+
+/* -----highlight.js样式---------- */
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+  background: #ffffff
+}
+
+.hljs,.hljs-subst {
+  color: #0085e0;
+  border-left: 4px solid #00bd0b;
+}
+
+.hljs-comment {
+  color: #888
+}
+
+.hljs-attribute,.hljs-doctag,.hljs-keyword,.hljs-meta-keyword,.hljs-name,.hljs-selector-tag {
+  font-weight: 700;
+  color: #cf0000;
+}
+
+.hljs-deletion,.hljs-number,.hljs-quote,.hljs-selector-class,.hljs-selector-id,.hljs-string,.hljs-template-tag,.hljs-type {
+  color: #00c660;
+}
+
+.hljs-section,.hljs-title {
+  color: #cd35e6;;
+  font-weight: 700
+}
+
+.hljs-link,.hljs-regexp,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-symbol,.hljs-template-variable,.hljs-variable {
+  color: #bc6060
+}
+
+.hljs-literal {
+  color: #78a960
+}
+
+.hljs-addition,.hljs-built_in,.hljs-bullet,.hljs-code {
+  color: #397300
+}
+
+.hljs-meta {
+  color: #1f7199
+}
+
+.hljs-meta-string {
+  color: #4d99bf
+}
+
+.hljs-emphasis {
+  font-style: italic
+}
+
+.hljs-strong {
+  font-weight: 700
+}
+
